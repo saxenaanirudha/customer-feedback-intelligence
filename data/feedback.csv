@@ -1,0 +1,327 @@
+FeedbackID,Text,Rating,Date,CustomerType
+F001,Subscription is too expensive for small 5-person startup teams.,2,2025-08-14,Standard
+F002,Great value for money compared to Jira and Asana enterprise tiers.,5,2025-08-19,Premium
+F003,Too expensive.,1,2026-02-04,Standard
+F004,The price hike after the February update is completely unreasonable.,1,2026-02-10,Standard
+F005,Pricing increased by 25% without any advance email notification.,2,2026-02-12,Enterprise
+F006,We need a cheaper starter plan for teams that only need basic task boards.,3,2026-01-20,Standard
+F007,Pricing is very reasonable considering the rich feature set.,4,2025-11-05,Premium
+F008,Confusion regarding seat limits on the Standard tier. Unclear documentation.,2,2026-02-18,Standard
+F009,The enterprise tier pricing is well worth the dedicated support manager.,5,2025-10-14,Enterprise
+F010,Cost per seat is too steep compared to ClickUp.,2,2026-02-08,Standard
+F011,Affordable and crystal-clear pricing model.,5,2025-09-22,Premium
+F012,Annual discount should really be 20% instead of 10%.,3,2025-12-11,Standard
+F013,Why are audit logs locked behind the most expensive Enterprise tier?,2,2026-02-22,Enterprise
+F014,Flexible pricing tiers make it effortless to scale team seats up or down.,5,2025-10-28,Premium
+F015,Hidden charges showed up on our monthly invoice after inviting a guest collaborator.,1,2026-02-12,Standard
+F016,Worth every penny for the productivity boost our team experienced.,5,2025-07-15,Enterprise
+F017,"Expensive, but the time saved on sprint planning offsets the cost.",4,2025-09-08,Premium
+F018,Pricing structure is needlessly complicated with add-on feature packages.,2,2026-02-16,Standard
+F019,Decent pricing for mid-market companies.,4,2025-06-25,Premium
+F020,The free trial is too short to evaluate all enterprise security capabilities.,3,2026-02-01,Enterprise
+F021,Overpriced for solo freelancers.,2,2025-05-18,Standard
+F022,Pricing per seat scales reasonably for our 80-person engineering team.,4,2025-11-30,Enterprise
+F023,Unexpected price jump on auto-renewal. Very unhappy.,1,2026-02-17,Standard
+F024,Competitive pricing compared to legacy tools.,4,2025-04-12,Standard
+F025,Would love a pay-as-you-go model for sporadic contractors.,3,2026-01-29,Premium
+F026,Way too costly after recent tier changes.,1,2026-02-19,Standard
+F027,Good pricing for enterprise volume licensing.,5,2025-12-05,Enterprise
+F028,"Slightly expensive for non-profits, wish you had education discounts.",3,2025-08-02,Standard
+F029,Best ROI of any SaaS tool in our tech stack.,5,2025-10-18,Enterprise
+F030,The price jump from Standard to Premium is too steep.,2,2026-02-15,Standard
+F031,Please add dark mode support! Late night sprint reviews are blinding.,3,2025-08-20,Standard
+F032,The Gantt chart and milestone tracking features are simply outstanding.,5,2025-09-04,Enterprise
+F033,Missing native integration with GitHub and GitLab. Webhooks feel clunky.,2,2025-11-18,Premium
+F034,Automations fail silently without sending alert emails to workspace admins.,1,2025-10-22,Enterprise
+F035,Love the customizable workflow templates for agile sprint planning.,5,2025-12-03,Premium
+F036,Export to Excel and PDF reports is missing key summary statistics and charts.,3,2026-01-15,Standard
+F037,The recurring task automation saves our operations team 5 hours every week!,5,2025-09-30,Standard
+F038,Mobile application lacks custom dashboard widgets and offline syncing.,2,2025-11-29,Standard
+F039,Need sub-task dependencies and critical path calculation on the timeline view.,3,2026-01-08,Enterprise
+F040,Time tracking integration with Harvest is flawless and accurate.,5,2025-08-28,Premium
+F041,Cannot customize notification rules per project; inbox is getting flooded with spam.,2,2025-10-12,Standard
+F042,"The custom fields feature is very flexible, powerful, and easy to configure.",4,2025-12-20,Premium
+F043,Need two-factor authentication (2FA) enforced org-wide for all members.,4,2026-01-25,Enterprise
+F044,"Search filter doesn't save previous queries, have to re-type filters every time.",3,2025-10-05,Standard
+F045,Document collaboration and live commenting inside tasks works really well.,5,2025-09-18,Premium
+F046,Kanban board WIP limits have significantly improved our team flow.,5,2025-07-22,Standard
+F047,Would like native video recording integration inside task comments.,4,2025-11-14,Premium
+F048,Sprint velocity charts are inaccurate when story points are updated mid-sprint.,2,2025-10-16,Enterprise
+F049,Checklist templates are a lifesaver for repetitive client onboarding tasks.,5,2025-06-11,Standard
+F050,Role-based access control (RBAC) needs granular permission levels for external clients.,3,2026-01-18,Enterprise
+F051,Calendar view doesn't sync properly with Google Calendar two-way.,2,2025-09-27,Standard
+F052,Automated recurring reports sent via email every Monday morning work great.,5,2025-12-22,Premium
+F053,Custom dashboard widgets are top tier! Our executive team loves the summary view.,5,2026-01-10,Enterprise
+F054,Tagging team members in comment threads sometimes fails to send push notifications.,2,2025-10-08,Standard
+F055,Forms feature for external client intake requests is super neat and saves time.,4,2025-08-11,Standard
+F056,Roadmap timeline view is clean and easy to present during board meetings.,5,2025-12-18,Enterprise
+F057,Need bulk task editing capabilities across multiple projects at once.,3,2025-09-05,Premium
+F058,File preview for .psd and .fig files inside attachments does not work.,3,2025-11-06,Standard
+F059,Webhook triggers are fast and reliable for Zapier workflows.,4,2025-07-09,Standard
+F060,Please let us customize status colors on the board view.,3,2026-02-02,Standard
+F061,Support agent Sarah was super helpful and resolved our issue in 10 mins!,5,2025-09-14,Premium
+F062,Support ticket #8921 has been open for 6 days with no response from staff.,1,2025-10-19,Standard
+F063,Enterprise dedicated support rep Alex is top notch and always proactive.,5,2025-11-12,Enterprise
+F064,Support agent was rude and clearly did not read my ticket details before replying.,1,2025-10-25,Standard
+F065,Average support experience. Solved the problem eventually but took 48 hours.,3,2025-12-14,Standard
+F066,No live chat option available for standard tier users. Email-only is frustrating.,2,2026-01-19,Standard
+F067,Quick turnaround on our permission migration request. Kudos to the tech team!,5,2025-08-31,Enterprise
+F068,Automated chatbot keeps looping and refuses to connect me to a human agent.,1,2025-10-30,Standard
+F069,Support team helped us recover accidentally deleted project workspace data.,5,2026-02-01,Premium
+F070,Ticket marked as resolved by agent even though the bug still persists.,1,2025-10-18,Standard
+F071,Helpful onboarding session provided by the customer success team.,5,2025-05-20,Enterprise
+F072,Support response time has degraded over the last 3 months.,2,2025-11-25,Standard
+F073,Prompt and courteous customer support team whenever we hit a snag.,4,2025-07-14,Premium
+F074,Waited 2 hours on phone support only to be disconnected.,1,2025-10-21,Standard
+F075,Documentation in the knowledge base is outdated and links are broken.,2,2025-12-08,Standard
+F076,Enterprise SLA is adhered to strictly. Responses always under 15 minutes.,5,2026-01-22,Enterprise
+F077,Support agent gave incorrect advice that caused duplicate tasks to be created.,1,2025-10-17,Standard
+F078,Friendly support reps who genuinely try to help solve tricky edge cases.,4,2025-09-29,Standard
+F079,Escalated ticket took over a week to reach tier 2 engineering support.,2,2025-11-08,Premium
+F080,Customer success manager reached out proactively to review our usage. Great service.,5,2025-12-28,Enterprise
+F081,Charged twice for the same monthly subscription cycle. Please refund ASAP.,1,2026-02-05,Standard
+F082,Invoices are generated automatically and sent to accounting without hassle.,5,2025-11-20,Enterprise
+F083,Unable to cancel subscription from settings page. Link goes to 404 error.,1,2026-02-09,Standard
+F084,Refund requested 3 weeks ago has still not arrived in our bank account.,1,2026-02-15,Premium
+F085,Credit card update was smooth and instant through the billing portal.,4,2025-12-08,Standard
+F086,Billed for 50 seats when we only have 35 active users in our workspace.,1,2026-02-11,Enterprise
+F087,Invoice does not display our company VAT / tax identification number properly.,2,2026-01-10,Premium
+F088,Seamless transition from monthly to annual billing with clear receipt.,5,2025-09-08,Standard
+F089,Auto-renewal occurred without a 7-day prior reminder email.,2,2026-02-16,Standard
+F090,Payment gateway failed three times during checkout with valid cards.,2,2026-02-02,Standard
+F091,Stripe billing integration works reliably without any issues.,4,2025-06-30,Premium
+F092,Charged full price after applying promo coupon code.,1,2026-02-07,Standard
+F093,Easy to download monthly billing history in PDF format.,4,2025-10-10,Standard
+F094,Subscription cancellation process is intentionally deceptive and convoluted.,1,2026-02-13,Standard
+F095,"Billing portal is clean, allows easy card changes and invoices download.",5,2025-08-04,Premium
+F096,Got billed for inactive users who were deactivated last month.,1,2026-02-14,Enterprise
+F097,Currency conversion charges added without explanation.,2,2026-02-06,Standard
+F098,Annual billing discount was applied seamlessly.,5,2025-11-11,Premium
+F099,Cannot change billing email address from account owner to finance team.,2,2026-01-14,Standard
+F100,Immediate refund issued by billing rep after accidental double payment. Thank you!,4,2026-02-20,Standard
+F101,App keeps crashing on large sprint boards after the v2.4 update.,1,2025-10-24,Enterprise
+F102,Page load time is painfully slow during peak morning hours.,1,2025-10-26,Premium
+F103,File upload fails constantly for files over 15MB.,2,2025-10-27,Standard
+F104,Platform is super snappy and handles 500+ tasks without lag.,5,2025-08-10,Standard
+F105,Dashboard loading issue: charts take 20 seconds to render.,2,2025-10-29,Premium
+F106,Constant 504 gateway timeouts when syncing calendar events.,1,2025-10-31,Standard
+F107,Significant performance improvement observed in the latest patch.,4,2025-12-15,Enterprise
+F108,Memory leak in desktop app consuming 3GB RAM in background.,1,2025-11-02,Premium
+F109,Real-time task synchronization happens instantaneously across browsers.,5,2026-01-05,Standard
+F110,App crashes whenever I try to bulk export 100+ tasks to CSV.,1,2025-10-28,Standard
+F111,Huge lag when typing in rich-text editor on long task descriptions.,2,2025-11-01,Standard
+F112,"Fastest project management tool we have used, even on poor wifi connections.",5,2025-07-18,Standard
+F113,Search takes over 10 seconds to return results for simple keyword queries.,2,2025-10-25,Enterprise
+F114,WebSocket disconnections every 15 minutes requiring hard page refresh.,1,2025-10-30,Premium
+F115,Smooth 60fps animations across all views. Great engineering!,5,2026-01-12,Standard
+F116,Mobile app hangs on splash screen when opening on iOS 17.,1,2025-11-03,Standard
+F117,Backend latency has improved dramatically since the server upgrade.,4,2025-12-01,Enterprise
+F118,Spinning wheel of death whenever we open sprint backlog with 200 items.,1,2025-10-29,Premium
+F119,Very fast and responsive interface on Chrome and Edge.,5,2025-09-12,Standard
+F120,CPU usage spikes to 100% when running board filters.,1,2025-10-27,Standard
+F121,The new UI redesign is super clean and intuitive.,5,2025-09-02,Standard
+F122,Navigation sidebar is cluttered and hard to find project settings.,2,2025-10-15,Standard
+F123,Button placement for 'Delete Project' is too close to 'Archive'. Accidentally deleted work!,1,2025-11-22,Premium
+F124,Kanban drag-and-drop is smooth and visually satisfying.,5,2025-12-01,Standard
+F125,"Typography contrast is too low in light mode, difficult to read for older users.",3,2026-01-12,Standard
+F126,"Clean layout, minimal learning curve for onboarding new junior developers.",4,2025-08-25,Premium
+F127,Mobile interface is clunky and buttons overlap on smaller screen resolutions.,2,2025-11-10,Standard
+F128,"Modern aesthetic, looks much better than legacy Jira.",5,2025-09-25,Standard
+F129,Too many clicks required just to mark a sub-task as completed.,2,2025-12-28,Standard
+F130,Colors used for priority tags are very distinct and helpful.,4,2025-09-10,Premium
+F131,Dark mode palette is stunning and easy on the eyes.,5,2026-01-18,Standard
+F132,Date picker dropdown is buggy and closes prematurely when selecting a month.,2,2025-10-09,Standard
+F133,"Intuitive hierarchy between Workspaces, Projects, Sections, and Tasks.",5,2025-07-05,Enterprise
+F134,Iconography is ambiguous. Needs text tooltips on hover.,3,2025-11-16,Standard
+F135,Sleek minimalist design that keeps team focused on delivery.,5,2025-12-12,Premium
+F136,Modal popup covers the entire screen and cannot be closed with ESC key.,2,2025-10-03,Standard
+F137,Beautiful charts and visual reporting dashboards.,5,2026-01-28,Enterprise
+F138,Notification bell icon badge count does not clear after reading notifications.,2,2025-11-24,Standard
+F139,Card layout in Kanban is well structured with assignees clearly visible.,4,2025-08-16,Standard
+F140,Filter bar takes up too much vertical screen real estate.,3,2025-12-04,Premium
+F141,"Overall excellent product, but the mobile app could be better.",5,2025-10-04,Premium
+F142,"The features are good, but support response time is extremely slow.",2,2025-11-15,Standard
+F143,"Decent software for basic task tracking, nothing extraordinary.",3,2025-08-19,Standard
+F144,"Great looking interface, but completely broken backend and constant data loss.",1,2025-10-23,Enterprise
+F145,"A bit pricey, but our engineering team cannot work without it now.",4,2026-02-13,Premium
+F146,Decent software.,5,2025-09-11,Standard
+F147,"Love the automation engine, but the pricing is getting ridiculous.",3,2026-02-17,Standard
+F148,"Brilliant feature set, though we had one bad support interaction last week.",4,2025-11-09,Enterprise
+F149,"The platform itself is 5 stars, but the billing team took 2 weeks to fix an error.",2,2026-02-08,Premium
+F150,"Customer support is fantastic, but the software has too many bugs lately.",2,2025-10-28,Standard
+F151,"Super useful tool, only minor gripe is the lack of a Linux desktop app.",4,2025-12-07,Standard
+F152,"Very powerful platform, but steep learning curve for non-technical team members.",3,2025-09-20,Enterprise
+F153,Great product!,5,2025-09-17,Standard
+F154,App keeps crashing.,1,2025-10-27,Standard
+F155,Worst support ever.,1,2025-10-21,Standard
+F156,Works well.,4,2025-11-08,Standard
+F157,Super fast and reliable platform.,5,2026-01-30,Enterprise
+F158,login doesnt wrk on firefox after latest update plz fix,1,2025-10-26,Standard
+F159,superb exprience using this for our 20 person agency,5,2025-09-15,Standard
+F160,plz fix kanban lag when moving cards across sprints,2,2025-10-28,Premium
+F161,the search func is kinda buggy tbh takes 5 secs to filter,2,2025-11-04,Standard
+F162,Hands down the best project management tool we have adopted in years.,5,2025-12-10,Enterprise
+F163,Very smooth.,4,2025-06-18,Standard
+F164,Loving the new updates!,5,2025-08-05,Standard
+F165,Terrible experience.,1,2025-10-22,Standard
+F166,Simply awesome.,5,2025-07-29,Premium
+F167,Too buggy.,1,2025-10-31,Standard
+F168,Good tool.,4,2025-05-12,Standard
+F169,Could be better.,3,2025-09-03,Standard
+F170,Does the job.,3,2025-11-21,Standard
+F171,Not impressed.,2,2025-12-19,Standard
+F172,Outstanding tool for remote teams.,5,2026-01-15,Enterprise
+F173,Sprint planning template #173 has made our weekly backlog grooming 40% faster.,5,2025-09-15,Premium
+F174,Task filter by custom tag is fast and responsive. Really appreciate the recent update.,5,2025-12-10,Standard
+F175,Automated email summaries for overdue tasks have helped keep our client deadlines on track.,5,2026-01-22,Premium
+F176,Dedicated enterprise customer success team helped us configure custom security roles efficiently.,5,2025-10-19,Enterprise
+F177,Page navigation feels snappy and search results appear almost instantly.,5,2025-08-17,Standard
+F178,The new dark mode theme is well balanced and makes working at night much more comfortable.,5,2026-01-23,Standard
+F179,Our cross-functional marketing and engineering teams love the shared calendar and roadmap views.,5,2025-09-20,Enterprise
+F180,Solid project management tool with clean design. Does everything our team needs.,4,2025-07-27,Standard
+F181,Keyboard shortcuts are fantastic and speed up navigation tremendously.,4,2025-11-03,Premium
+F182,"Great tool overall, but occasional lag when editing large tables inside documents.",4,2025-11-21,Premium
+F183,Fair pricing and helpful support team whenever questions come up.,4,2025-07-12,Standard
+F184,Clean and modern dark theme. Much easier on the eyes during evening shifts.,4,2025-12-21,Standard
+F185,The CSV import mapped all our existing Trello boards in minutes. Very smooth.,4,2025-08-10,Standard
+F186,Support answered all our GDPR and SOC2 compliance questions thoroughly.,4,2025-06-22,Enterprise
+F187,The custom fields feature is easy to configure and very useful for client billing.,4,2025-12-01,Premium
+F188,"The custom dashboard overview is good, but we really need an export to PowerPoint option.",3,2025-09-22,Premium
+F189,Need more granular permissions for external guest collaborators on private boards.,3,2025-12-25,Enterprise
+F190,Search functionality needs fuzzy matching. Misspelling a word yields 0 results.,3,2025-08-04,Standard
+F191,"Good tool, but missing time estimation rollups for subtasks.",3,2025-10-06,Standard
+F192,Wish there was an option to archive old projects automatically based on 90 days inactivity.,3,2026-01-10,Premium
+F193,"Decent interface, but onboarding tutorials could be more comprehensive for juniors.",3,2025-11-13,Standard
+F194,Average experience so far. It has all the basics but lacks advanced BI analytics.,3,2025-12-16,Standard
+F195,Pricing tier update in February made it too costly to keep 200 guest reviewers active.,2,2026-02-17,Standard
+F196,Card drag-and-drop is unresponsive on touch screen laptops when moving between sprint columns.,2,2025-11-01,Standard
+F197,Invoice for subscription renewal did not include our corporate purchase order number.,2,2026-02-12,Enterprise
+F198,Cannot update credit card details without contacting support. Very inconvenient.,2,2026-02-10,Standard
+F199,Mobile app push notifications arrive 20 minutes late on Android 14.,2,2025-11-09,Standard
+F200,Notifications are delayed by 15 minutes on mobile app.,2,2025-10-14,Standard
+F201,The UI feels a bit sluggish when loading boards with over 300 cards.,2,2025-10-03,Premium
+F202,Issue tracker crashed while editing milestone #202. Lost 15 minutes of uncommitted notes.,1,2025-10-03,Standard
+F203,App froze while uploading attachment for ticket #303. Server timeout occurred.,1,2025-10-01,Standard
+F204,Charged twice on monthly credit card billing. Ticket submitted 3 days ago with no reply.,1,2026-02-15,Standard
+F205,System crashed during our quarterly company sprint demo. Very embarrassing.,1,2025-10-28,Enterprise
+F206,The audit log doesn't show who deleted a task. Huge compliance concern for our audit.,1,2025-11-08,Enterprise
+F207,Sprint planning template #207 has made our weekly backlog grooming 40% faster.,5,2025-09-19,Premium
+F208,Task filter by custom tag is fast and responsive. Really appreciate the recent update.,5,2025-12-09,Standard
+F209,Automated email summaries for overdue tasks have helped keep our client deadlines on track.,5,2026-01-21,Premium
+F210,Dedicated enterprise customer success team helped us configure custom security roles efficiently.,5,2025-10-18,Enterprise
+F211,Page navigation feels snappy and search results appear almost instantly.,5,2025-08-16,Standard
+F212,The new dark mode theme is well balanced and makes working at night much more comfortable.,5,2026-01-27,Standard
+F213,Our cross-functional marketing and engineering teams love the shared calendar and roadmap views.,5,2025-09-19,Enterprise
+F214,Solid project management tool with clean design. Does everything our team needs.,4,2025-07-26,Standard
+F215,Keyboard shortcuts are fantastic and speed up navigation tremendously.,4,2025-11-02,Premium
+F216,"Great tool overall, but occasional lag when editing large tables inside documents.",4,2025-11-20,Premium
+F217,Fair pricing and helpful support team whenever questions come up.,4,2025-07-16,Standard
+F218,Clean and modern dark theme. Much easier on the eyes during evening shifts.,4,2025-12-20,Standard
+F219,The CSV import mapped all our existing Trello boards in minutes. Very smooth.,4,2025-08-09,Standard
+F220,Support answered all our GDPR and SOC2 compliance questions thoroughly.,4,2025-06-21,Enterprise
+F221,The custom fields feature is easy to configure and very useful for client billing.,4,2025-12-28,Premium
+F222,"The custom dashboard overview is good, but we really need an export to PowerPoint option.",3,2025-09-26,Premium
+F223,Need more granular permissions for external guest collaborators on private boards.,3,2025-12-24,Enterprise
+F224,Search functionality needs fuzzy matching. Misspelling a word yields 0 results.,3,2025-08-03,Standard
+F225,"Good tool, but missing time estimation rollups for subtasks.",3,2025-10-05,Standard
+F226,Wish there was an option to archive old projects automatically based on 90 days inactivity.,3,2026-01-09,Premium
+F227,"Decent interface, but onboarding tutorials could be more comprehensive for juniors.",3,2025-11-17,Standard
+F228,Average experience so far. It has all the basics but lacks advanced BI analytics.,3,2025-12-15,Standard
+F229,Pricing tier update in February made it too costly to keep 234 guest reviewers active.,2,2026-02-16,Standard
+F230,Card drag-and-drop is unresponsive on touch screen laptops when moving between sprint columns.,2,2025-11-28,Standard
+F231,Invoice for subscription renewal did not include our corporate purchase order number.,2,2026-02-11,Enterprise
+F232,Cannot update credit card details without contacting support. Very inconvenient.,2,2026-02-14,Standard
+F233,Mobile app push notifications arrive 20 minutes late on Android 14.,2,2025-11-08,Standard
+F234,Notifications are delayed by 15 minutes on mobile app.,2,2025-10-13,Standard
+F235,The UI feels a bit sluggish when loading boards with over 300 cards.,2,2025-10-02,Premium
+F236,Issue tracker crashed while editing milestone #236. Lost 15 minutes of uncommitted notes.,1,2025-10-02,Standard
+F237,App froze while uploading attachment for ticket #337. Server timeout occurred.,1,2025-10-05,Standard
+F238,Charged twice on monthly credit card billing. Ticket submitted 3 days ago with no reply.,1,2026-02-14,Standard
+F239,System crashed during our quarterly company sprint demo. Very embarrassing.,1,2025-10-27,Enterprise
+F240,The audit log doesn't show who deleted a task. Huge compliance concern for our audit.,1,2025-11-07,Enterprise
+F241,Sprint planning template #241 has made our weekly backlog grooming 40% faster.,5,2025-09-18,Premium
+F242,Task filter by custom tag is fast and responsive. Really appreciate the recent update.,5,2025-12-13,Standard
+F243,Automated email summaries for overdue tasks have helped keep our client deadlines on track.,5,2026-01-20,Premium
+F244,Dedicated enterprise customer success team helped us configure custom security roles efficiently.,5,2025-10-17,Enterprise
+F245,Page navigation feels snappy and search results appear almost instantly.,5,2025-08-15,Standard
+F246,The new dark mode theme is well balanced and makes working at night much more comfortable.,5,2026-01-26,Standard
+F247,Our cross-functional marketing and engineering teams love the shared calendar and roadmap views.,5,2025-09-23,Enterprise
+F248,Solid project management tool with clean design. Does everything our team needs.,4,2025-07-25,Standard
+F249,Keyboard shortcuts are fantastic and speed up navigation tremendously.,4,2025-11-01,Premium
+F250,"Great tool overall, but occasional lag when editing large tables inside documents.",4,2025-11-19,Premium
+F251,Fair pricing and helpful support team whenever questions come up.,4,2025-07-15,Standard
+F252,Clean and modern dark theme. Much easier on the eyes during evening shifts.,4,2025-12-24,Standard
+F253,The CSV import mapped all our existing Trello boards in minutes. Very smooth.,4,2025-08-08,Standard
+F254,Support answered all our GDPR and SOC2 compliance questions thoroughly.,4,2025-06-20,Enterprise
+F255,The custom fields feature is easy to configure and very useful for client billing.,4,2025-12-27,Premium
+F256,"The custom dashboard overview is good, but we really need an export to PowerPoint option.",3,2025-09-25,Premium
+F257,Need more granular permissions for external guest collaborators on private boards.,3,2025-12-28,Enterprise
+F258,Search functionality needs fuzzy matching. Misspelling a word yields 0 results.,3,2025-08-02,Standard
+F259,"Good tool, but missing time estimation rollups for subtasks.",3,2025-10-04,Standard
+F260,Wish there was an option to archive old projects automatically based on 90 days inactivity.,3,2026-01-08,Premium
+F261,"Decent interface, but onboarding tutorials could be more comprehensive for juniors.",3,2025-11-16,Standard
+F262,Average experience so far. It has all the basics but lacks advanced BI analytics.,3,2025-12-19,Standard
+F263,Pricing tier update in February made it too costly to keep 268 guest reviewers active.,2,2026-02-15,Standard
+F264,Card drag-and-drop is unresponsive on touch screen laptops when moving between sprint columns.,2,2025-11-27,Standard
+F265,Invoice for subscription renewal did not include our corporate purchase order number.,2,2026-02-10,Enterprise
+F266,Cannot update credit card details without contacting support. Very inconvenient.,2,2026-02-13,Standard
+F267,Mobile app push notifications arrive 20 minutes late on Android 14.,2,2025-11-12,Standard
+F268,Notifications are delayed by 15 minutes on mobile app.,2,2025-10-12,Standard
+F269,The UI feels a bit sluggish when loading boards with over 300 cards.,2,2025-10-01,Premium
+F270,Issue tracker crashed while editing milestone #270. Lost 15 minutes of uncommitted notes.,1,2025-10-01,Standard
+F271,App froze while uploading attachment for ticket #371. Server timeout occurred.,1,2025-10-04,Standard
+F272,Charged twice on monthly credit card billing. Ticket submitted 3 days ago with no reply.,1,2026-02-18,Standard
+F273,System crashed during our quarterly company sprint demo. Very embarrassing.,1,2025-10-26,Enterprise
+F274,The audit log doesn't show who deleted a task. Huge compliance concern for our audit.,1,2025-11-06,Enterprise
+F275,Sprint planning template #275 has made our weekly backlog grooming 40% faster.,5,2025-09-17,Premium
+F276,Task filter by custom tag is fast and responsive. Really appreciate the recent update.,5,2025-12-12,Standard
+F277,Automated email summaries for overdue tasks have helped keep our client deadlines on track.,5,2026-01-24,Premium
+F278,Dedicated enterprise customer success team helped us configure custom security roles efficiently.,5,2025-10-16,Enterprise
+F279,Page navigation feels snappy and search results appear almost instantly.,5,2025-08-14,Standard
+F280,The new dark mode theme is well balanced and makes working at night much more comfortable.,5,2026-01-25,Standard
+F281,Our cross-functional marketing and engineering teams love the shared calendar and roadmap views.,5,2025-09-22,Enterprise
+F282,Solid project management tool with clean design. Does everything our team needs.,4,2025-07-01,Standard
+F283,Keyboard shortcuts are fantastic and speed up navigation tremendously.,4,2025-11-28,Premium
+F284,"Great tool overall, but occasional lag when editing large tables inside documents.",4,2025-11-18,Premium
+F285,Fair pricing and helpful support team whenever questions come up.,4,2025-07-14,Standard
+F286,Clean and modern dark theme. Much easier on the eyes during evening shifts.,4,2025-12-23,Standard
+F287,The CSV import mapped all our existing Trello boards in minutes. Very smooth.,4,2025-08-12,Standard
+F288,Support answered all our GDPR and SOC2 compliance questions thoroughly.,4,2025-06-19,Enterprise
+F289,The custom fields feature is easy to configure and very useful for client billing.,4,2025-12-26,Premium
+F290,"The custom dashboard overview is good, but we really need an export to PowerPoint option.",3,2025-09-24,Premium
+F291,Need more granular permissions for external guest collaborators on private boards.,3,2025-12-27,Enterprise
+F292,Search functionality needs fuzzy matching. Misspelling a word yields 0 results.,3,2025-08-06,Standard
+F293,"Good tool, but missing time estimation rollups for subtasks.",3,2025-10-03,Standard
+F294,Wish there was an option to archive old projects automatically based on 90 days inactivity.,3,2026-01-07,Premium
+F295,"Decent interface, but onboarding tutorials could be more comprehensive for juniors.",3,2025-11-15,Standard
+F296,Average experience so far. It has all the basics but lacks advanced BI analytics.,3,2025-12-18,Standard
+F297,Pricing tier update in February made it too costly to keep 302 guest reviewers active.,2,2026-02-19,Standard
+F298,Card drag-and-drop is unresponsive on touch screen laptops when moving between sprint columns.,2,2025-11-26,Standard
+F299,Invoice for subscription renewal did not include our corporate purchase order number.,2,2026-02-09,Enterprise
+F300,Cannot update credit card details without contacting support. Very inconvenient.,2,2026-02-12,Standard
+F301,Mobile app push notifications arrive 20 minutes late on Android 14.,2,2025-11-11,Standard
+F302,Notifications are delayed by 15 minutes on mobile app.,2,2025-10-16,Standard
+F303,The UI feels a bit sluggish when loading boards with over 300 cards.,2,2025-10-28,Premium
+F304,Issue tracker crashed while editing milestone #304. Lost 15 minutes of uncommitted notes.,1,2025-10-28,Standard
+F305,App froze while uploading attachment for ticket #405. Server timeout occurred.,1,2025-10-03,Standard
+F306,Charged twice on monthly credit card billing. Ticket submitted 3 days ago with no reply.,1,2026-02-17,Standard
+F307,System crashed during our quarterly company sprint demo. Very embarrassing.,1,2025-10-02,Enterprise
+F308,The audit log doesn't show who deleted a task. Huge compliance concern for our audit.,1,2025-11-05,Enterprise
+F309,Sprint planning template #309 has made our weekly backlog grooming 40% faster.,5,2025-09-16,Premium
+F310,Task filter by custom tag is fast and responsive. Really appreciate the recent update.,5,2025-12-11,Standard
+F311,Automated email summaries for overdue tasks have helped keep our client deadlines on track.,5,2026-01-23,Premium
+F312,Dedicated enterprise customer success team helped us configure custom security roles efficiently.,5,2025-10-20,Enterprise
+F313,Page navigation feels snappy and search results appear almost instantly.,5,2025-08-13,Standard
+F314,The new dark mode theme is well balanced and makes working at night much more comfortable.,5,2026-01-24,Standard
+F315,Our cross-functional marketing and engineering teams love the shared calendar and roadmap views.,5,2025-09-21,Enterprise
+F316,Solid project management tool with clean design. Does everything our team needs.,4,2025-07-28,Standard
+F317,Keyboard shortcuts are fantastic and speed up navigation tremendously.,4,2025-11-04,Premium
+F318,"Great tool overall, but occasional lag when editing large tables inside documents.",4,2025-11-17,Premium
+F319,Fair pricing and helpful support team whenever questions come up.,4,2025-07-13,Standard
+F320,Clean and modern dark theme. Much easier on the eyes during evening shifts.,4,2025-12-22,Standard
+F042,Duplicate feedback entry for F042 testing.,4,2025-10-12,Standard
+F322,   ,3,2025-09-15,Premium
+F323,Invalid rating test record with rating 7.,7,2025-11-20,Standard
+F324,Invalid date record format.,4,2025-99-99,Enterprise
+F325,Invalid customer tier record test.,2,2026-01-10,GuestTier
+F326,"The mobile app crashes every time I open a large project.",1,2026-08-29,Enterprise
