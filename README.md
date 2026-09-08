@@ -248,3 +248,21 @@ The `.env` file and virtual environment are excluded from Git using `.gitignore`
 ## Project Purpose
 
 This project demonstrates an end-to-end approach to converting unstructured customer feedback into structured business intelligence using Python, analytics, automation, and Generative AI.
+
+## Dashboard Screenshots
+
+### Dashboard Overview
+
+![Dashboard Overview](screenshots/dashboard-overview.png)
+
+### AI Insights
+
+![AI Insights](screenshots/screenshots-ai-insights.png)
+
+### AI Insights - Additional View
+
+![AI Insights Additional View](screenshots/screenshots-ai-insights-1.png)
+
+### Priority Issues
+
+![Priority Issues](screenshots/screenshots-issues-page.png)
