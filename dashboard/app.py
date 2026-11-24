@@ -8,6 +8,7 @@ Feedback Trend and Priority Distribution charts, Priority Issues table with stat
 Customer Segment Snapshot table, and an expandable detailed search section.
 """
 
+import html
 import os
 import sys
 import json
@@ -21,10 +22,29 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src import preprocessing, classifier, priority  # noqa: E402
 from src.insights import get_feedback_trends, get_top_pain_points, get_negative_topic_analysis
 from src.executive_insights import generate_executive_insights, build_executive_context, get_context_hash
+from src.ai_assistant import AIAssistant
 
 load_dotenv()
 
 PRIORITIZED_PATH = os.path.join("output", "prioritized_feedback.csv")
+
+
+def to_safe_csv_bytes(df_to_export: pd.DataFrame) -> bytes:
+    """Sanitize DataFrame for secure CSV export preventing formula injection (CWE-1236).
+
+    Prepends a single quote (') to any string cell starting with dangerous formula
+    triggers (=, +, -, @, \\t, \\r) to prevent execution in spreadsheet software.
+    """
+    safe_df = df_to_export.copy()
+    DANGEROUS_TRIGGERS = ("=", "+", "-", "@", "\t", "\r")
+
+    for col in safe_df.columns:
+        if safe_df[col].dtype == object or pd.api.types.is_string_dtype(safe_df[col]):
+            safe_df[col] = safe_df[col].apply(
+                lambda val: f"'{val}" if isinstance(val, str) and val.startswith(DANGEROUS_TRIGGERS) else val
+            )
+
+    return safe_df.to_csv(index=False).encode("utf-8")
 
 # ---------------------------------------------------------------------------
 # Page configuration & SaaS Dark Theme CSS
@@ -612,7 +632,7 @@ with col_actions:
             st.session_state.force_full_run = True
             st.rerun()
     with col_export:
-        csv_data = df.to_csv(index=False).encode("utf-8")
+        csv_data = to_safe_csv_bytes(df)
         st.download_button(
             label="Export Report", 
             data=csv_data, 
@@ -922,7 +942,7 @@ if page == "Overview":
                     <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.76rem; padding: 4.5px 0;">
                         <div style="display: flex; align-items: center; gap: 8px; width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                             <span style="color: #64748B; font-weight: 700; width: 12px; display: inline-block;">{idx+1}</span>
-                            <span style="font-weight: 600; color: #E2E8F0;">{row['Topic']}</span>
+                            <span style="font-weight: 600; color: #E2E8F0;">{html.escape(str(row['Topic']))}</span>
                         </div>
                         <div style="flex-grow: 1; margin: 0 12px; background: #1E293B; height: 5px; border-radius: 2.5px; position: relative;">
                             <div style="background: #EF4444; width: {neg_rate}%; height: 5px; border-radius: 2.5px;"></div>
@@ -973,19 +993,19 @@ if page == "Overview":
                 <div style="background: #1E293B30; border: 1px solid #33415550; border-radius: 6px; padding: 10px; display: flex; gap: 10px; align-items: start;">
                     <div style="margin-top: 2px;">{alert_svg}</div>
                     <div style="font-size: 0.76rem; color: #E2E8F0; line-height: 1.35;">
-                        <b>{top_topic}</b> is the top pain point with <b>{top_topic_pct:.1f}%</b> negative feedback and {top_topic_hc} high/critical issues.
+                        <b>{html.escape(str(top_topic))}</b> is the top pain point with <b>{top_topic_pct:.1f}%</b> negative feedback and {top_topic_hc} high/critical issues.
                     </div>
                 </div>
                 <div style="background: #1E293B30; border: 1px solid #33415550; border-radius: 6px; padding: 10px; display: flex; gap: 10px; align-items: start;">
                     <div style="margin-top: 2px;">{users_svg}</div>
                     <div style="font-size: 0.76rem; color: #E2E8F0; line-height: 1.35;">
-                        <b>{top_risk_tier}</b> customers show elevated risk with <b>{top_risk_pct:.1f}%</b> of feedback marked as high/critical.
+                        <b>{html.escape(str(top_risk_tier))}</b> customers show elevated risk with <b>{top_risk_pct:.1f}%</b> of feedback marked as high/critical.
                     </div>
                 </div>
                 <div style="background: #1E293B30; border: 1px solid #33415550; border-radius: 6px; padding: 10px; display: flex; gap: 10px; align-items: start;">
                     <div style="margin-top: 2px;">{trend_svg}</div>
                     <div style="font-size: 0.76rem; color: #E2E8F0; line-height: 1.35;">
-                        <b>{second_topic}</b> issues are driving negative sentiment with <b>{second_topic_pct:.1f}%</b> negative feedback.
+                        <b>{html.escape(str(second_topic))}</b> issues are driving negative sentiment with <b>{second_topic_pct:.1f}%</b> negative feedback.
                     </div>
                 </div>
             </div>
@@ -1062,7 +1082,7 @@ if page == "Overview":
                 prio_rows_html += f"""
                 <div style="display: flex; align-items: center; gap: 8px; font-size: 0.76rem; margin-bottom: 4px;">
                     <span style="width: 8px; height: 8px; border-radius: 50%; background-color: {prio_color}; display: inline-block;"></span>
-                    <span style="font-weight: 600; color: #F8FAFC;">{row['Priority']} ({row['Count']})</span>
+                    <span style="font-weight: 600; color: #F8FAFC;">{html.escape(str(row['Priority']))} ({row['Count']})</span>
                 </div>
                 """
             st.markdown(
@@ -1178,7 +1198,7 @@ if page == "Overview":
         with col_dl_search2:
             st.download_button(
                 label="Download CSV",
-                data=df.to_csv(index=False).encode("utf-8"),
+                data=to_safe_csv_bytes(df),
                 file_name="customer_feedback_intelligence_filtered.csv",
                 mime="text/csv",
                 use_container_width=True,
@@ -1264,31 +1284,51 @@ elif page == "Customers":
 
 # === PAGE: AI INSIGHTS ===
 elif page == "AI Insights" or st.session_state.nav_page == "AI Insights":
-    st.markdown("## AI Strategic Insights Panel")
-    st.caption("View executive briefing summaries and prioritized strategic roadmap actions.")
+    st.markdown("## AI Strategic Insights & Assistant")
+    st.caption("Ask questions about customer feedback, view executive summaries, and generate targeted test scenarios.")
     
+    # In-page interactive query bar
+    ai_col1, ai_col2 = st.columns([4, 1])
+    with ai_col1:
+        panel_query = st.text_input(
+            "Ask AI Assistant a question about customer feedback:",
+            placeholder="e.g. What are the major customer complaints? What test scenarios should we run?",
+            key="panel_ai_input",
+            label_visibility="collapsed"
+        )
+    with ai_col2:
+        if st.button("Ask Assistant", type="primary", use_container_width=True, key="panel_ai_btn"):
+            if panel_query:
+                st.session_state.ask_ai_query = panel_query
+                st.rerun()
+
     if "ask_ai_query" in st.session_state and st.session_state.ask_ai_query:
-        st.markdown(f"### Q: \"{st.session_state.ask_ai_query}\"")
-        with st.spinner("Analyzing context..."):
-            query_lower = st.session_state.ask_ai_query.lower()
-            if "bill" in query_lower:
-                ai_answer = (
-                    "**Analysis**: Billing represents the largest customer friction topic in the filtered segment. "
-                    "Primary drivers relate to seat additions, billing renewal loops, and refunds.\n\n"
-                    "**Action Plan**: Review the payment auto-retry flow and prioritize billing disputes to minimize churn."
-                )
-            elif "performance" in query_lower or "slow" in query_lower:
-                ai_answer = (
-                    "**Analysis**: Performance issues display high negative rates and are highly concentrated in Enterprise accounts.\n\n"
-                    "**Action Plan**: Launch infrastructure telemetry audits and optimize sprint board load query times."
-                )
-            else:
-                ai_answer = (
-                    f"**Analysis**: Out of {len(df)} records matching the segment filters, {high_critical_count} are "
-                    f"flagged as High or Critical priority, representing immediate SLA risk.\n\n"
-                    "**Action Plan**: Focus on triaging negative Enterprise feedback first to safeguard key account revenue."
-                )
-            st.markdown(ai_answer)
+        query_text = st.session_state.ask_ai_query
+        st.markdown(f"### Q: \"{html.escape(query_text)}\"")
+        with st.spinner("AI Assistant is analyzing feedback evidence..."):
+            assistant = AIAssistant()
+            res = assistant.ask(query_text, df)
+
+            st.markdown(res.answer)
+
+            if res.cited_feedback_ids:
+                citations_str = ", ".join([f"`{fid}`" for fid in res.cited_feedback_ids])
+                st.caption(f"📌 **Supporting Feedback Citations:** {citations_str} (from {res.retrieved_count} retrieved records)")
+
+            if res.suggested_improvements:
+                st.markdown("##### 💡 Recommended Improvements")
+                for imp in res.suggested_improvements:
+                    st.markdown(f"- {imp}")
+
+            if res.suggested_test_scenarios:
+                st.markdown("##### 🧪 Suggested QA Test Scenarios")
+                for tsc in res.suggested_test_scenarios:
+                    st.markdown(f"- {tsc}")
+
+            mode_badge = "Deterministic Fallback" if res.is_fallback else f"Live AI ({assistant.model})"
+            latency_info = f" • Latency: {res.latency_ms:.0f}ms" if res.latency_ms > 0 else ""
+            st.caption(f"*Engine: {mode_badge}{latency_info}*")
+
             st.session_state.ask_ai_query = None
             
     st.write("")
@@ -1324,7 +1364,7 @@ elif page == "Reports":
         st.caption("Download all customer records matching the active filters.")
         st.download_button(
             label="Download CSV Dataset",
-            data=df.to_csv(index=False).encode("utf-8"),
+            data=to_safe_csv_bytes(df),
             file_name="customer_feedback_intelligence_filtered.csv",
             mime="text/csv",
             use_container_width=True,
@@ -1713,7 +1753,7 @@ elif page == "Settings":
         de1, de2 = st.columns(2)
         with de1:
             st.download_button(
-                label="Download CSV", data=df.to_csv(index=False).encode("utf-8"),
+                label="Download CSV", data=to_safe_csv_bytes(df),
                 file_name="feedback_iq_export.csv", mime="text/csv",
                 use_container_width=True, key="settings_dl_csv", type="secondary"
             )

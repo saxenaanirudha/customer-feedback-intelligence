@@ -151,13 +151,20 @@ def run_pipeline(force_reclassify: bool = False, priority_only: bool = False) ->
         # PRIORITY SUMMARY & METRICS DISPLAY
         # -------------------------------------------------------------
         total_records = len(df_prioritized)
-        avg_score = df_prioritized["PriorityScore"].mean()
+        avg_score = float(df_prioritized["PriorityScore"].mean()) if total_records > 0 else 0.0
 
         print("\n" + "=" * 72)
         print("                        PRIORITY SCORING SUMMARY                      ")
         print("=" * 72)
         print(f"\n  • Total Records Processed:   {total_records}")
         print(f"  • Average Priority Score:    {avg_score:.1f} / 100")
+
+        if total_records == 0:
+            print("\n  [Notice] No feedback records available to summarize.")
+            print("\n" + "=" * 72)
+            print(" Output saved successfully: output/prioritized_feedback.csv")
+            print("=" * 72 + "\n")
+            return
 
         # Priority Level Distribution
         print("\n  >> Priority Level Distribution:")

@@ -77,7 +77,15 @@ def calculate_priority_score(
     u_pts = URGENCY_POINTS.get(urgency, 10)
     c_pts = CUSTOMER_TYPE_POINTS.get(customer_type, 8)
     s_pts = SENTIMENT_POINTS.get(sentiment, 5)
-    r_pts = RATING_POINTS.get(int(rating) if str(rating).isdigit() else 3, 4)
+
+    try:
+        r_float = float(rating)
+        if r_float.is_integer() and int(r_float) in RATING_POINTS:
+            r_pts = RATING_POINTS[int(r_float)]
+        else:
+            r_pts = 4  # default neutral fallback for fractional or out-of-range
+    except (ValueError, TypeError):
+        r_pts = 4
 
     raw_score = u_pts + c_pts + s_pts + r_pts
     return max(0, min(100, int(round(raw_score))))
@@ -207,9 +215,10 @@ def validate_priority_inputs(df: pd.DataFrame, error_log_path: Optional[Path] = 
 
         # Check Rating
         try:
-            r = int(row.get("Rating"))
-            if r not in valid_ratings:
-                errors.append({"FeedbackID": fid, "Field": "Rating", "Value": r, "Reason": "Rating must be 1 to 5"})
+            val = row.get("Rating")
+            r_float = float(val)
+            if not r_float.is_integer() or int(r_float) not in valid_ratings:
+                errors.append({"FeedbackID": fid, "Field": "Rating", "Value": val, "Reason": "Rating must be an integer from 1 to 5"})
         except (ValueError, TypeError):
             errors.append({"FeedbackID": fid, "Field": "Rating", "Value": row.get("Rating"), "Reason": "Non-numeric rating"})
 
@@ -241,7 +250,8 @@ def add_priority_columns(df: pd.DataFrame, error_log_path: Optional[Path] = None
     """
     errors = validate_priority_inputs(df, error_log_path=error_log_path)
     if errors:
-        print(f"      [Warning] Logged {len(errors)} validation anomalies to {error_log_path.name}")
+        log_dest = error_log_path.name if error_log_path else "memory"
+        print(f"      [Warning] Logged {len(errors)} validation anomalies to {log_dest}")
 
     enriched = df.copy()
 

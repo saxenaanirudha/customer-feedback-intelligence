@@ -61,8 +61,11 @@ def get_overall_kpis(df: pd.DataFrame) -> Dict[str, Any]:
     neu_count = int((df["Sentiment"] == "Neutral").sum())
     neg_count = int((df["Sentiment"] == "Negative").sum())
 
-    high_crit_count = int(df["PriorityLevel"].isin(["Critical Priority", "High Priority"]).sum())
-    crit_count = int((df["PriorityLevel"] == "Critical Priority").sum())
+    high_crit_levels = ["Critical Priority", "High Priority", "Critical", "High"]
+    crit_levels = ["Critical Priority", "Critical"]
+
+    high_crit_count = int(df["PriorityLevel"].isin(high_crit_levels).sum())
+    crit_count = int(df["PriorityLevel"].isin(crit_levels).sum())
 
     return {
         "total_feedback": total,
@@ -254,10 +257,13 @@ def get_customer_segment_analysis(df: pd.DataFrame) -> pd.DataFrame:
         if total == 0:
             continue
 
+        high_crit_levels = ["Critical Priority", "High Priority", "Critical", "High"]
+        crit_levels = ["Critical Priority", "Critical"]
+
         avg_r = sub["Rating"].mean()
         neg_pct = (sub["Sentiment"] == "Negative").sum() / total * 100
-        high_crit_pct = sub["PriorityLevel"].isin(["Critical Priority", "High Priority"]).sum() / total * 100
-        crit_pct = (sub["PriorityLevel"] == "Critical Priority").sum() / total * 100
+        high_crit_pct = sub["PriorityLevel"].isin(high_crit_levels).sum() / total * 100
+        crit_pct = sub["PriorityLevel"].isin(crit_levels).sum() / total * 100
 
         segments.append({
             "CustomerType": cust_type,
@@ -286,11 +292,12 @@ def get_feedback_trends(df: pd.DataFrame) -> pd.DataFrame:
     df_temp = df.copy()
     df_temp["Month"] = pd.to_datetime(df_temp["Date"]).dt.to_period("M").dt.to_timestamp()
 
+    high_crit_levels = ["Critical Priority", "High Priority", "Critical", "High"]
     trends = df_temp.groupby("Month").agg(
         TotalVolume=("FeedbackID", "count"),
         NegativeCount=("Sentiment", lambda s: (s == "Negative").sum()),
         AvgRating=("Rating", "mean"),
-        HighCriticalCount=("PriorityLevel", lambda p: p.isin(["Critical Priority", "High Priority"]).sum()),
+        HighCriticalCount=("PriorityLevel", lambda p: p.isin(high_crit_levels).sum()),
     ).reset_index()
 
     trends["AvgRating"] = trends["AvgRating"].round(2)
@@ -352,10 +359,13 @@ def get_top_pain_points(df: pd.DataFrame, top_n: int = 4) -> List[Dict[str, Any]
         if n_total < 3:  # minimum sample size threshold
             continue
 
+        high_crit_levels = ["Critical Priority", "High Priority", "Critical", "High"]
+        crit_levels = ["Critical Priority", "Critical"]
+
         neg_count = int((group["Sentiment"] == "Negative").sum())
         neg_pct = (neg_count / n_total) * 100
-        high_crit_count = int(group["PriorityLevel"].isin(["Critical Priority", "High Priority"]).sum())
-        crit_count = int((group["PriorityLevel"] == "Critical Priority").sum())
+        high_crit_count = int(group["PriorityLevel"].isin(high_crit_levels).sum())
+        crit_count = int(group["PriorityLevel"].isin(crit_levels).sum())
         avg_score = float(group["PriorityScore"].mean())
         avg_rating = float(group["Rating"].mean())
 
@@ -432,7 +442,8 @@ def generate_business_insights(df: pd.DataFrame) -> List[str]:
             )
 
     # Insight 3: Critical Issue Concentration
-    crit_df = df[df["PriorityLevel"] == "Critical Priority"]
+    crit_levels = ["Critical Priority", "Critical"]
+    crit_df = df[df["PriorityLevel"].isin(crit_levels)]
     if len(crit_df) > 0:
         top_crit_topics = crit_df["Topic"].value_counts().head(2).index.tolist()
         topic_str = " and ".join([f"**{t}**" for t in top_crit_topics])

@@ -165,10 +165,11 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     cleaned["Text"] = cleaned["Text"].astype(str).str.strip()
     cleaned = cleaned[cleaned["Text"] != ""]
 
-    # Step 3: Clean Rating - convert to numeric, filter between 1 and 5, cast to int
+    # Step 3: Clean Rating - convert to numeric, filter between 1 and 5, reject fractional values, cast to int
     cleaned["Rating"] = pd.to_numeric(cleaned["Rating"], errors="coerce")
     cleaned = cleaned.dropna(subset=["Rating"])
     cleaned = cleaned[(cleaned["Rating"] >= 1) & (cleaned["Rating"] <= 5)]
+    cleaned = cleaned[cleaned["Rating"] % 1 == 0]
     cleaned["Rating"] = cleaned["Rating"].astype(int)
 
     # Step 4: Clean Date - parse to datetime, drop invalid dates, format as YYYY-MM-DD
